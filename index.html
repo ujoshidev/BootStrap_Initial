@@ -47,7 +47,9 @@
 
                 <div class="col-6 col-sm align-self-center">
                     <a href="#scroll-reservation-table" class="btn btn-block">
-                        <button class="btn btn-warning btn-block">Reserve Table</button>
+                        <button class="btn btn-warning btn-block"
+                        data-toggle="tooltip" data-html="true" 
+                        title="Or Call Us at <br><strong>+000 123456789</strong>" data-placement="bottom">Reserve Table</button>
                     </a>
                 </div>
 
@@ -205,6 +207,11 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
 </body>
 
 </html>
