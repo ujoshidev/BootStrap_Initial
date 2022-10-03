@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
     <link rel="stylesheet" href="css/styles.css">
     <title>Ristorante Con Fusion</title>
 </head>
@@ -31,7 +30,7 @@
 					<li class="nav-item"> <a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span>Contact</a></li>
 				</ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="loginLink">
                     <span class="fa fa-sign-in"></span> Login</a>
                 </span>
 			<div>
@@ -89,11 +88,10 @@
 
                 <div class="col-6 col-sm align-self-center">
                     <a href="#scroll-reservation-table" class="btn btn-block">
-                        <button class="btn btn-warning btn-block"
-                        data-toggle="modal" data-target="#reservationModal">Reserve Table</button>
+                        <button class="btn btn-warning btn-block" id="reservationBtn">Reserve Table</button>
                     </a>
                 </div>
-
+                
             </div>
         </div>
     </header>
@@ -332,6 +330,22 @@
                 }
             });
         })
+    </script>
+    <script>
+    $(document).ready(function(){
+        $('#loginLink').click(function(){
+            $('#loginModal').modal({
+                keyboard: false
+            })
+        });
+        
+        $('#reservationBtn').click(function(){
+            $('#reservationModal').modal({
+                keyboard: false
+            })
+        });
+    });
+
     </script>
 
 </body>
